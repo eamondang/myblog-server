@@ -1,6 +1,7 @@
 use err::AppError;
 
+pub mod config;
 pub mod err;
 pub mod resp;
 
-pub type Result<T> = std::result::Result<T, AppError>;
+pub type AppResult<T> = std::result::Result<T, AppError>;
