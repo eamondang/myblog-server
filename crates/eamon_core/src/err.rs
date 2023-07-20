@@ -50,10 +50,10 @@ impl AppError {
 
   pub fn code(&self) -> i32 {
     match &self.kind {
-      &Kind::Jwt => 9527,
-      &Kind::Validator => 9528,
-      &Kind::NotFound => 9529,
-      &Kind::AlreadyExists => 9530,
+      Kind::Jwt => 9527,
+      Kind::Validator => 9528,
+      Kind::NotFound => 9529,
+      Kind::AlreadyExists => 9530,
       _ => -1,
     }
   }

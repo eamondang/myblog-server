@@ -1,7 +1,14 @@
-use err::AppError;
+pub fn add(left: usize, right: usize) -> usize {
+  left + right
+}
 
-pub mod config;
-pub mod err;
-pub mod resp;
+#[cfg(test)]
+mod tests {
+  use super::*;
 
-pub type AppResult<T> = std::result::Result<T, AppError>;
+  #[test]
+  fn it_works() {
+    let result = add(2, 2);
+    assert_eq!(result, 4);
+  }
+}

@@ -5,7 +5,7 @@ use crate::{err::AppError, AppResult};
 #[derive(Deserialize)]
 pub struct Postgres {
   pub dsn: String,
-  pub max_conn: i32,
+  pub max_conns: i32,
 }
 
 #[derive(Deserialize)]
