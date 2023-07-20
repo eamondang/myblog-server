@@ -1,6 +1,7 @@
 use err::AppError;
 
 pub mod config;
+pub mod context;
 pub mod err;
 pub mod resp;
 
