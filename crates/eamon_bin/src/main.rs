@@ -20,6 +20,7 @@ async fn main() {
 
   let app = Router::new().route("/", routing::get(|| async { "Hello World!!" })).layer(Extension(context));
   info!("Connected Database Success!");
+
   info!("Server is running on port: {}", &cfg.web.addr);
   Server::bind(&cfg.web.addr.parse().unwrap()).serve(app.into_make_service()).await.unwrap();
 }

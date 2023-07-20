@@ -1,8 +1,8 @@
 version: '3.9'
 
 services:
-  eamondang-server:
-    container_name: eamon-blog
+  eamon-server:
+    container_name: eamon-server
     image: postgres:latest
     restart: always
     env_file:
