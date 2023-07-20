@@ -1,0 +1,17 @@
+[workspace]
+members = [
+   "crates/eamon_bin",
+   "crates/eamon_api",
+   "crates/eamon_core",
+   "crates/eamon_domain",
+   "crates/eamon_infrastructure"
+]
+package.authors = ["Dang Quang Vu <eamondang@gmail.com>"]
+package.description = "The server of my blog https://eamondang.com"
+package.homepage = "https://eamondang.com"
+package.repository = "https://github.com/eamondang/myblog-server"
+package.keywords = ["eamon", "dang", "blog", "axum", "rust"]
+package.readme = "README.org"
+package.version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
