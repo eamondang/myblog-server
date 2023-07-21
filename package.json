@@ -1,14 +1,14 @@
 {
     "name": "eamondang",
     "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
+    "description": "Open source - Real Server for https://eamondang.com",
     "scripts": {
         "prepare": "husky install"
     },
     "keywords": ["eamondang", "blockchain", "rust", "rustaceans", "eamon", "axum"],
     "author": "Dang Quang Vu <eamondang@gmail.com>",
-    "license": "ISC",
+    "license": "Apache-2.0",
+    "private": true,
     "devDependencies": {
         "husky": "^8.0.3",
         "lint-staged" : "^13.2.2"
