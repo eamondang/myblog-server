@@ -49,3 +49,22 @@ dependencies = [
     "lint", ## lints our code using clippy during pre-commit
     "lint-staged", ## uses cargofmt to format our staged files
 ]
+
+# Dockers & Database
+[tasks.docker]
+command = "docker"
+args = ["compose", "-f", "./deploy/docker-compose.postgres.yml", "up", "--build"]
+
+[tasks.docker-start]
+command = "docker"
+args = ["compose", "-f", "./deploy/docker-compose.postgres.yml", "start"]
+
+[tasks.postgres]
+command = "docker"
+args = ["compose", "-f", "./deploy/docker-compose.postgres.yml", "start"]
+
+[tasks.migrate] ## ensure Postgres is running, the container has a bit of warmup time causing migrations to fail
+cwd = "./crates/eamon_infrastructure"
+command = "sqlx"
+args = ["migrate", "run"]
+dependencies = ["postgres"]

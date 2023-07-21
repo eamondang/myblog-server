@@ -1,0 +1,30 @@
+#+TITLE: Open source - Real Server for https://eamondang.com
+#+AUTHOR: Dang Quang Vu
+#+EMAIL: eamondang@gmail.com
+#+SETUPFILE: ~/theme-readtheorg.setup
+#+HTML_HEAD: <style>pre.src{background:#343131;color:white;} </style>
+
+*** The server for my websites
++ This is personal project for my blog on https://eamondang.com/.
++ The project is the real project when i implement a project for server.
++ This project used Axum framework for https protocol, tokio for asynchronous service and sqlx on PostgreSQL for Database
+
+*** Running Postgres
+#+begin_src sh :results output
+cargo make docker
+#+end_src
+
+#+begin_src sh :results output
+docker ps
+#+end_src
+
+#+begin_src sh :results output
+cargo make test
+#+end_src
+
+*** Project Structure
++ =eamon-bin=: Main binary executable for the application, serving as the entry point.
++ =eamon-api=: Contains the applications's interface/APIs for handling incoming  requests and responses
++ =eamon-core=: Represents the core business logic & rules, independent of external dependencies
++ =eamon-domain=: Bridges the core and infrastructure layers with domain-specific definitions and interfaces.
++ =eamon-infrastructure=: handles interactions with database, libraries and external services.
