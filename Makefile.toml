@@ -43,3 +43,9 @@ args = ["test"]
 install_crate = "cargo-watch"
 command = "cargo"
 args = ["watch", "-x", "test"]
+
+[tasks.pre-commit]
+dependencies = [
+    "lint", ## lints our code using clippy during pre-commit
+    "lint-staged", ## uses cargofmt to format our staged files
+]

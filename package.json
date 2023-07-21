@@ -1,0 +1,19 @@
+{
+    "name": "eamondang",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "prepare": "husky install"
+    },
+    "keywords": ["eamondang", "blockchain", "rust", "rustaceans", "eamon", "axum"],
+    "author": "Dang Quang Vu <eamondang@gmail.com>",
+    "license": "ISC",
+    "devDependencies": {
+        "husky": "^8.0.3",
+        "lint-staged" : "^13.2.2"
+    },
+    "lint-staged": {
+        "*.rs" : "cargo make format"
+    }
+}
