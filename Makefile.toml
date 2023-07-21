@@ -68,3 +68,25 @@ cwd = "./crates/eamon_infrastructure"
 command = "sqlx"
 args = ["migrate", "run"]
 dependencies = ["postgres"]
+
+# ci task is called from our CI GitHub action
+[tasks.ci]
+dependencies = [
+    "build",
+    "test"
+]
+
+# coverage task is called from our coverage GitHub action
+[tasks.ci-coverage]
+toolchain = "nightly"
+command = "cargo"
+args = [
+    "tarpaulin",
+    "--verbose",
+    "--all-features",
+    "--workspace",
+    "--timeout",
+    "240",
+    "--out",
+    "Xml"
+]
